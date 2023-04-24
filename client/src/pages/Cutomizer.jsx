@@ -40,7 +40,7 @@ const Cutomizer = () => {
 
     try {
       setGeneratingImg(true);
-      const response = await fetch("http://localhost:4500/api/v1/dalle", {
+      const response = await fetch(`${import.meta.env.VITE_API}/api/v1/dalle`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
